@@ -34,15 +34,4 @@ query = wordCounts.writeStream \
 
 query.awaitTermination()
 
-## Para Manter Tudo 
-wordCounts = words.groupBy("word").count()
-
-query = wordCounts.writeStream \
-    .outputMode("update") \  # Modo update mantém o estado
-    .format("console") \
-    .option("truncate", "false") \
-    .start()
-
-query.awaitTermination()
-
 
