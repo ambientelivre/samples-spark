@@ -21,9 +21,10 @@ words = socketDF.select(explode(split(socketDF.value, " ")).alias("word"), "time
 
 ## Para Manter Tudo 
 wordCounts = words.groupBy("word").count()
-
+ 
+# Modo update mantém o estado
 query = wordCounts.writeStream \
-    .outputMode("update") \  # Modo update mantém o estado
+    .outputMode("update") \ 
     .format("console") \
     .option("truncate", "false") \
     .start()
