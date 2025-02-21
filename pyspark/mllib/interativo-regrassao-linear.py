@@ -25,8 +25,8 @@ lr = LinearRegression(featuresCol="features", labelCol="price")
 model = lr.fit(df_transformed)
 
 # Mostrar coeficiente e intercepto
-print(f"Coeficiente: {model.coefficients[0]}")
-print(f"Intercepto: {model.intercept}")
+print({model.coefficients[0]})
+print({model.intercept})
 
 # Testar o modelo com um novo valor (tamanho da casa = 110m²)
 test_data = spark.createDataFrame([(110,)], ["size"])
