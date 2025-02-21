@@ -1,4 +1,10 @@
+# Para Testar 
+# nc -lk -p 9999
 #
+# Dirite no NC
+# spark streaming é incrível
+# pyspark é poderoso
+# spark spark spark
 #
 #
 
